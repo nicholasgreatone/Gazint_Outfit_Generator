@@ -1,3 +1,5 @@
+
+
 #Outfit generator
 import colorama
 from colorama import Fore
@@ -8,6 +10,10 @@ from art import *
 
 ###################only_works_for_hern_for_now_add_BV_soon#############################
 ##################Weather_calulation_for_proper_attire_for_temp########################
+
+
+
+
 
 #city_input \033[1;33m --- \033[0m
 print ("\033[1;33m ")
@@ -71,7 +77,7 @@ really_cold = 1-40
 ###############################Outfit_colors_selection##################################
 
 
-outfit_colors = ['Green', 'Blue', 'White', 'Black', 'Red', 'Camo']
+outfit_colors = ['Green', 'Blue', 'White', 'Black', 'Red', 'Camo','Brown']
 print()
 base_color = input ("What color would you like to base your outfit on?\nEnter color here: ")
 
@@ -88,19 +94,88 @@ else:
   print(f"\033[0;31m     ,Sorry! I failed to find a {upper_base_color} color in your wardrobe, try again with another color.\033[0m")
   aprint("bear squiting")
   
+  
 ##################################Outfit_combos####################################
   
 #green_outfits
 #blue_outfits
-#black_outfits
+
+
+black_outfits = [
+####
+  ##
+]
+
+
 #white_outfits
 #red_outfits
 #camo_outfits
 
-print(' ')
-print(' ')
-input()
+ #######items_visual######### 
+"""
+headwear_visual = ('-~-')
+glasses_visual = ('o-o ')
+shirt_visual = ('-|-')
+pants_visual = ('/\ ')
+shoe_visual = ('|_ ')
 
 
+  #########
+print(" ")
+print(" ")
+print(" ")
+print(" ")
+print(" ")
+print(headwear_visual)
+print(glasses_visual)
+print(shirt_visual)
+print(pants_visual)
+print(shoe_visual)
+#print (black_outfits)
+print (" ")
+ """
 
+#######################
+
+###########################
+
+  
+
+##########janky v1 of outfit combos####################
+
+black_outfits = [
+  {
+    'color': 'Black',
+    'name' : 'The "Black N Silver" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Aviator sunglasses (green tint) or silver aviators'],
+    'shirt' : ['-|-    Black & Silver Nike T-shirt (Add shirt-stays)'], 
+    'belt' : [' =     Black Dress Belt'],
+    'pant' : ['/ \    Black chino or black corduroy pants '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+  }
+
+  
+]
+print ("\n \n")
+
+if upper_base_color == ("Black"):
+  for b_fit in black_outfits:
+    print(f'{b_fit.get("name")}\n ')
+    for hats in b_fit.get("headwear"):
+        print(f'\t{hats}')
+    for glasses in b_fit.get("glass"):
+      print(f"\t{glasses}")
+    for shirts in b_fit.get("shirt"):
+      print(f"\t{shirts}")
+    for belts in b_fit.get("belt"):
+      print(f"\t{belts}")
+    for pants in b_fit.get("pant"):
+      print(f"\t{pants}")
+    for shoes in b_fit.get("footwear"):
+      print(f"\t{shoes}")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
 

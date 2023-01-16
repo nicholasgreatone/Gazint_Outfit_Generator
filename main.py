@@ -79,7 +79,7 @@ really_cold = 1-40
 
 outfit_colors = ['Green', 'Blue', 'White', 'Black', 'Red', 'Camo','Brown']
 print()
-base_color = input ("What color would you like to base your outfit on?\nEnter color here: ")
+base_color = input ("What color would you like to base your outfit on? (green or black for now)\nEnter color here: ")
 
 #print (upper_base_color)
 upper_base_color = ( base_color.title() )
@@ -142,6 +142,7 @@ print (" ")
   
 
 ##########janky v1 of outfit combos####################
+########################black###########################
 
 black_outfits = [
   {
@@ -153,11 +154,114 @@ black_outfits = [
     'belt' : [' =     Black Dress Belt'],
     'pant' : ['/ \    Black chino or black corduroy pants '],
     'footwear' : [' L     Doc Martins + black socks '], 
+  },
+   {
+    'color': 'Black',
+    'name' : 'The "Ameba" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Aviator sunglasses  or browline glasses'],
+    'shirt' : ['-|-    Black Ameba T-shirt (Add shirt-stays)'], 
+    'belt' : [' =     Black ROTC Belt with brass buckle'],
+    'pant' : ['/ \    Light blue chinos '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+  },
+   {
+    'color': 'Black',
+    'name' : 'The "Business Reds" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Browline glasses'],
+    'shirt' : ['-|-    Black Polo Dress shirt (Add shirt-stays)'], 
+    'belt' : [' =     Black dress belt'],
+    'pant' : ['/ \    Red corduroy dress pants '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+  },
+   {
+    'color': 'Black',
+    'name' : 'The "Unlabled" outfit: ',
+    'headwear' : [' ~     Grey Hat'],
+    'glass' : ['o-o    None or Browline glasses'],
+    'shirt' : ['-|-    Black T-shirt'], 
+    'belt' : [' =     Black dress belt'],
+    'pant' : ['/ \    Camel corduroy pants '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+  },
+   {
+    'color': 'Black',
+    'name' : 'The "Snow & Coal" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Browline sunglassesglasses'],
+    'shirt' : ['-|-    White shirt (keywest) T-shirt'], 
+    'belt' : [' =     Black dress belt'],
+    'pant' : ['/ \    Black Thin-lined corduroy pants or Black chinos '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+  },
+   {
+    'color': 'Black',
+    'name' : 'The "Snow & Coal" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Browline sunglassesglasses'],
+    'shirt' : ['-|-    White shirt (keywest) T-shirt'], 
+    'belt' : [' =     Black dress belt'],
+    'pant' : ['/ \    Black Thin-lined corduroy pants or Black chinos '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+  },
+   {
+    'color': 'Black',
+    'name' : 'The "DESTROY-BOYS" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Browline sunglassesglasses'],
+    'shirt' : ['-|-    White Destroy Boys shirt T-shirt'], 
+    'belt' : [' =     Black dress belt'],
+    'pant' : ['/ \     Black chinos or Black Jeans '],
+    'footwear' : [' L     Doc Martins or Blac shoes + white or black socks '], 
   }
+
 
   
 ]
+
+########################green#############################
+
+green_outfits = [
+  {
+    'color': 'Green',
+    'name' : 'The "Forrest" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Browline tortoise shell glasses'],
+    'shirt' : ['-|-    Black T-shirt '], 
+    'belt' : [' =     Black belt with brass buckles'],
+    'pant' : ['/ \    Forrest green corduroy pants '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+    'blank' : [" "],
+  },
+  {
+    'color': 'Green',
+    'name' : 'The "Forrest_v3" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Browline tortoise shell glasses'],
+    'shirt' : ['-|-    Black T-shirt '], 
+    'belt' : [' =     Black belt with brass buckles'],
+    'pant' : ['/ \    Forrest green corduroy pants '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+    'blank' : [" "],
+  },
+  {
+    'color': 'Green',
+    'name' : 'The "Forrest_v3" outfit: ',
+    'headwear' : [' ~     N/A'],
+    'glass' : ['o-o    Browline tortoise shell glasses'],
+    'shirt' : ['-|-    Black T-shirt '], 
+    'belt' : [' =     Black belt with brass buckles'],
+    'pant' : ['/ \    Forrest green corduroy pants '],
+    'footwear' : [' L     Doc Martins + black socks '], 
+    'blank' : [" "],
+  },
+]
+
+
+
 print ("\n \n")
+#####################################
 
 if upper_base_color == ("Black"):
   for b_fit in black_outfits:
@@ -174,6 +278,29 @@ if upper_base_color == ("Black"):
       print(f"\t{pants}")
     for shoes in b_fit.get("footwear"):
       print(f"\t{shoes}")
+      print(" ")
+      print(" ")
+
+#####################################
+
+if upper_base_color == ("Green"):
+  for b_fit in green_outfits:
+    print(f'{b_fit.get("name")}\n ')
+    for hats in b_fit.get("headwear"):
+        print(f'\t{hats}')
+    for glasses in b_fit.get("glass"):
+      print(f"\t{glasses}")
+    for shirts in b_fit.get("shirt"):
+      print(f"\t{shirts}")
+    for belts in b_fit.get("belt"):
+      print(f"\t{belts}")
+    for pants in b_fit.get("pant"):
+      print(f"\t{pants}")
+    for shoes in b_fit.get("footwear"):
+      print(f"\t{shoes}")
+      print(" ")
+      print(" ")
+#####################################      
 print (" ")
 print (" ")
 print (" ")

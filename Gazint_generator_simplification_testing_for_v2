@@ -1,0 +1,34 @@
+
+     #simplification_testing_for_outfit_generator_v2
+
+import requests
+import json
+
+      #API key
+API_KEY = "982531ce4594fcdd1bdc25ad954f4f71"
+
+      #weather_4_input_location
+
+def get_weather(location):
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={location}&appid={API_KEY}&units=metric"
+    response = requests.get(url)
+    data = json.loads(response.text)
+    weather = data["weather"][0]["description"]
+    temperature = data["main"]["temp"]
+    return f"The weather in {location} is {weather} with a temperature of {temperature}°C."
+
+      #save_outfit
+def save_outfit():
+    outfit = input("Enter your outfit: ")
+    with open("outfit.txt", "w") as file:
+        file.write(outfit)
+    print("Outfit saved successfully!")
+
+      #main_funct
+def main():
+    location = input("Enter your location: ")
+    print(get_weather(location))
+    save_outfit()
+
+if __name__ == "__main__":
+    main()

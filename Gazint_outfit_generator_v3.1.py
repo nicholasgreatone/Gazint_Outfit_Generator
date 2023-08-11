@@ -98,19 +98,15 @@ Cold = 40-60
 really_cold = 1-40
 
 ###############################Outfit_colors_selection##################################
-
-
 outfit_colors = ['Green', 'Blue', 'White', 'Black', 'Red', 'Camo','Brown', 'Purple', 'Grey', 'Yellow']
 print()
 base_color = input ("What color would you like to base your outfit on? (Green, Black, White, Brown, Blue, Red, Purple, Grey, or Yellow?)\nEnter color here: ")
-
 #print (upper_base_color)
 upper_base_color = ( base_color.title() )
-
 print(" ")
 print(" ")
-
-yes_random = [ 'Yes','Y',]
+yes_random = [ 'Yes','Y','yes','y']
+no_random = [ 'No','N','no','n']
 
 if upper_base_color in outfit_colors:
   print (f"\033[0;32m     ,The color {upper_base_color} works! \033[0m")
@@ -122,223 +118,200 @@ if upper_base_color in outfit_colors:
   
           ###random outfit generation starts here###
   if do_they_want_random.title() in yes_random:
-    print (" ")
-    print(" Generating a random outfit now! \n")
-    
- 
+    print(" ")
+    print("Generating a random outfit now! \n")
+    print(" ")
+    print(" ")
+    random_outfit1 = random.choice(green_outfits)
+
+    print(f'{random_outfit1.get("name")}\n ')
+    for hats in random_outfit1.get("headwear"):
+        print(f'\t{hats}')
+    for glasses in random_outfit1.get("glass"):
+        print(f"\t{glasses}")
+    for shirts in random_outfit1.get("shirt"):
+        print(f"\t{shirts}")
+    for belts in random_outfit1.get("belt"):
+        print(f"\t{belts}")
+    for pants in random_outfit1.get("pant"):
+        print(f"\t{pants}")
+    for shoes in random_outfit1.get("footwear"):
+        print(f"\t{shoes}")
+   
+  else:
+      # Place the loop outside the if block
+      if upper_base_color == ("Black"):
+          print(" ")
+          print(" ")
+          for b_fit in black_outfits:
+              print(f'{b_fit.get("name")}\n ')
+              for hats in b_fit.get("headwear"):
+                  print(f'\t{hats}')
+              for glasses in b_fit.get("glass"):
+                  print(f"\t{glasses}")
+              for shirts in b_fit.get("shirt"):
+                  print(f"\t{shirts}")
+              for belts in b_fit.get("belt"):
+                  print(f"\t{belts}")
+              for pants in b_fit.get("pant"):
+                  print(f"\t{pants}")
+              for shoes in b_fit.get("footwear"):
+                  print(f"\t{shoes}")
+              print(" ")
+              print(" ")
+
+  #####################################
   
-else:
-  print(f"\033[0;31m     ,Sorry! I failed to find a {upper_base_color} color in your wardrobe, try again with another color! \033[0m")
-  aprint("bear squiting")
+      if upper_base_color == ("Green"):
+        for b_fit in green_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      ##################################### 
+      
+      if upper_base_color == ("Red"):
+        for b_fit in red_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      #####################################
+      
+      if upper_base_color == ("White"):
+        for b_fit in white_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      #####################################
+      
+      if upper_base_color == ("Brown"):
+        for b_fit in brown_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      #####################################
+      
+      if upper_base_color == ("Blue"):
+        for b_fit in blue_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      #####################################
+      
+      if upper_base_color == ("Purple"):
+        for b_fit in purple_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      #####################################
+      if upper_base_color == ("Grey"):
+        for b_fit in grey_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      #####################################
+      if upper_base_color == ("Yellow"):
+        for b_fit in yellow_outfits:
+          print(f'{b_fit.get("name")}\n ')
+          for hats in b_fit.get("headwear"):
+              print(f'\t{hats}')
+          for glasses in b_fit.get("glass"):
+            print(f"\t{glasses}")
+          for shirts in b_fit.get("shirt"):
+            print(f"\t{shirts}")
+          for belts in b_fit.get("belt"):
+            print(f"\t{belts}")
+          for pants in b_fit.get("pant"):
+            print(f"\t{pants}")
+          for shoes in b_fit.get("footwear"):
+            print(f"\t{shoes}")
+            print(" ")
+            print(" ")
+      #####################################
   
-  
-##################################Outfit_combos####################################
-  
-#green_outfits
-#blue_outfits
-#white_outfits
-#red_outfits
-#camo_outfits
-#blue_outfits
-#green_outfits
-#red_outfits
-#yellow_outfits
-
- #######items_visual######### 
-"""
-headwear_visual = ('-~-')
-glasses_visual = ('o-o ')
-shirt_visual = ('-|-')
-pants_visual = ('/\ ')
-shoe_visual = ('|_ ')
-  #########
-print(" ")
-print(" ")
-print(" ")
-print(" ")
-print(" ")
-print(headwear_visual)
-print(glasses_visual)
-print(shirt_visual)
-print(pants_visual)
-print(shoe_visual)
-#print (black_outfits)
-print (" ")
- """
-
-print ("\n \n")
-#####################################
-
-if upper_base_color == ("Black"):
-  for b_fit in black_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-
-#####################################
-
-if upper_base_color == ("Green"):
-  for b_fit in green_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-##################################### 
-
-if upper_base_color == ("Red"):
-  for b_fit in red_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-#####################################
-
-if upper_base_color == ("White"):
-  for b_fit in white_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-#####################################
-
-if upper_base_color == ("Brown"):
-  for b_fit in brown_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-#####################################
-
-if upper_base_color == ("Blue"):
-  for b_fit in blue_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-#####################################
-
-if upper_base_color == ("Purple"):
-  for b_fit in purple_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-#####################################
-if upper_base_color == ("Grey"):
-  for b_fit in grey_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-#####################################
-if upper_base_color == ("Yellow"):
-  for b_fit in yellow_outfits:
-    print(f'{b_fit.get("name")}\n ')
-    for hats in b_fit.get("headwear"):
-        print(f'\t{hats}')
-    for glasses in b_fit.get("glass"):
-      print(f"\t{glasses}")
-    for shirts in b_fit.get("shirt"):
-      print(f"\t{shirts}")
-    for belts in b_fit.get("belt"):
-      print(f"\t{belts}")
-    for pants in b_fit.get("pant"):
-      print(f"\t{pants}")
-    for shoes in b_fit.get("footwear"):
-      print(f"\t{shoes}")
-      print(" ")
-      print(" ")
-#####################################
-
 
 print (" ")
 print (" ")
